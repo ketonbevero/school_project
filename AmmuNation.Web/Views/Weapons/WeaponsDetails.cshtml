@@ -1,0 +1,44 @@
+﻿@model AmmuNation.Web.Models.Weapon
+
+@{ 
+    ViewData["Title"] = "WeaponsDetails";
+}
+
+<h2>Datasheet of one weapon</h2>
+
+@Html.ActionLink("Back to the list", "Index")
+
+<table border="1">
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Id)</td>
+        <td>@Html.DisplayFor(m => m.Id)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Name)</td>
+        <td>@Html.DisplayFor(m => m.Name)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Manufacturer)</td>
+        <td>@Html.DisplayFor(m => m.Manufacturer)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Type)</td>
+        <td>@Html.DisplayFor(m => m.Type)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Caliber)</td>
+        <td>@Html.DisplayFor(m => m.Caliber)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Weight)</td>
+        <td>@Html.DisplayFor(m => m.Weight)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Stability)</td>
+        <td>@Html.DisplayFor(m => m.Stability)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Accuracy)</td>
+        <td>@Html.DisplayFor(m => m.Accuracy)</td>
+    </tr>
+</table>

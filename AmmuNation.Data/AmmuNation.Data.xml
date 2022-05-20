@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AmmuNation.Data</name>
+    </assembly>
+    <members>
+        <member name="T:AmmuNation.Data.Models.AmmuNationDebtContext">
+            <summary>
+            Ammunation debt context.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Data.Models.AmmuNationDebtContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Data.Models.AmmuNationDebtContext"/> class.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Data.Models.AmmuNationDebtContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{AmmuNation.Data.Models.AmmuNationDebtContext})">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Data.Models.AmmuNationDebtContext"/> class.
+            </summary>
+            <param name="options">options.</param>
+        </member>
+        <member name="P:AmmuNation.Data.Models.AmmuNationDebtContext.Manufacturers">
+            <summary>
+            Gets or sets manufacturers.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.AmmuNationDebtContext.Models">
+            <summary>
+            Gets or sets models.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Data.Models.AmmuNationDebtContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            Lazy load.
+            </summary>
+            <param name="optionsBuilder">options.</param>
+        </member>
+        <member name="M:AmmuNation.Data.Models.AmmuNationDebtContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Model creating.
+            </summary>
+            <param name="modelBuilder">builder.</param>
+        </member>
+        <member name="T:AmmuNation.Data.Models.Manufacturer">
+            <summary>
+            Manufacturer.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Data.Models.Manufacturer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Data.Models.Manufacturer"/> class.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Manufacturer.ManufacturerId">
+            <summary>
+            Gets or sets manufacturerId.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Manufacturer.Nev">
+            <summary>
+            Gets or sets Nev.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Manufacturer.SzarmazasiHely">
+            <summary>
+            Gets or sets szarmazasihely.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Manufacturer.Models">
+            <summary>
+            Gets or sets models.
+            </summary>
+        </member>
+        <member name="T:AmmuNation.Data.Models.Model">
+            <summary>
+            Model entity.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.ModelId">
+            <summary>
+            Gets or sets modelid.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.ManufacturerId">
+            <summary>
+            Gets or sets manufacturerid.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.Tipus">
+            <summary>
+            Gets or sets tipus.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.Pontossag">
+            <summary>
+            Gets or sets pontossag.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.Stabilitas">
+            <summary>
+            Gets or sets stabilitas.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.Suly">
+            <summary>
+            Gets or sets suly.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.Kaliber">
+            <summary>
+            Gets or sets kaliber.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.Nev">
+            <summary>
+            Gets or sets nev.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.Selected">
+            <summary>
+            Gets or sets selected.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Data.Models.Model.Manufacturer">
+            <summary>
+            Gets or sets manufacturer.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,36 @@
+﻿@model AmmuNation.Web.Models.Weapon
+
+<h2>WeaponsEdit</h2>
+
+@using (Html.BeginForm("Edit", "Weapons"))
+{
+    @Html.ValidationSummary()
+
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.Id)
+    @Html.Hidden("editAction", ViewData["editAction"].ToString())
+
+    <div class="editor-label">@Html.LabelFor(m => m.Name)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Name)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Manufacturer)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Manufacturer)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Type)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Type)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Caliber)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Caliber)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Weight)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Weight)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Stability)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Stability)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Accuracy)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Accuracy)</div>
+
+    <input type="submit" value="SEND" />
+}

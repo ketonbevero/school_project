@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AmmuNation.Web.Models.Weapon>
+@section Styles {
+    <link href="~/css/style.css" rel="stylesheet" type="text/css"/>
+}
+
+<h2>Selected and unselected weapons</h2>
+
+@if (Model.Count() == 0)
+{
+    <p>No data in the database!</p>
+}
+else
+{
+    <table class="selected-items">
+        <tr>
+            <th>Selected weapons</th>
+        </tr>
+        <tr>
+            <td>Model name</td>
+            <td>Manufacturer</td>
+            <td>Model type</td>
+        </tr>
+        @foreach (var weapon in Model.Where(x => x.State == true).ToList())
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => weapon.Name)</td>
+                <td>@Html.DisplayFor(m => weapon.Manufacturer)</td>
+                <td>@Html.DisplayFor(m => weapon.Type)</td>
+            </tr>
+        }
+    </table>
+
+    <table class="unselected-items">
+        <tr>
+            <th>Unselected weapons</th>
+        </tr>
+        <tr>
+            <td>Model name</td>
+            <td>Manufacturer</td>
+            <td>Model type</td>
+        </tr>
+        @foreach (var weapon in Model.Where(x => x.State == false).ToList())
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => weapon.Name)</td>
+                <td>@Html.DisplayFor(m => weapon.Manufacturer)</td>
+                <td>@Html.DisplayFor(m => weapon.Type)</td>
+            </tr>
+        }
+    </table>
+}

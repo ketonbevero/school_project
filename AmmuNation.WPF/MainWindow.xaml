@@ -1,0 +1,31 @@
+﻿<Window x:Class="AmmuNation.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmmuNation.WPF"
+        xmlns:ui="clr-namespace:AmmuNation.WPF.UI"
+        xmlns:vm="clr-namespace:AmmuNation.WPF.VM"
+        xmlns:data="clr-namespace:AmmuNation.WPF.Data"
+        Loaded="Window_Loaded" Closing="Window_Closing"
+        Title="AmmuNation" Height="336" Width="472">
+    <Window.Resources>
+        <vm:MainViewModel x:Key="VM"/>
+        <ui:AccuracyToBrushConverter x:Key="AccuracyToBrushConverter" />
+        <DataTemplate x:Key="listTemplate" DataType="{x:Type data:Weapon}">
+            <DockPanel Background="{Binding Path=Accuracy, Converter={StaticResource AccuracyToBrushConverter}}">
+                <Label Content="{Binding Path=Name}" DockPanel.Dock="Top" HorizontalAlignment="Center"/>
+                <Label Content="{Binding Path=Manufacturer}" DockPanel.Dock="Bottom" HorizontalAlignment="Center"/>
+                <Label Content="{Binding Path=Caliber}" DockPanel.Dock="Left"/>
+                <Label Content="{Binding Path=Type}" DockPanel.Dock="Right"/>
+                <Label/>
+            </DockPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource VM}">
+        <ListBox ItemTemplate="{StaticResource listTemplate}" ItemsSource="{Binding Path=Weapons}" SelectedItem="{Binding Path=WeaponSelected}" HorizontalContentAlignment="Stretch" Margin="141,21,24,42"/>
+        <Button Command="{Binding Path=AddCmd}" Content="ADD" HorizontalAlignment="Left" Margin="23,21,0,0" VerticalAlignment="Top" Height="41" Width="96"/>
+        <Button Command="{Binding Path=ModCmd}" Content="MODIFY" HorizontalAlignment="Left" Margin="23,84,0,0" VerticalAlignment="Top" Height="41" Width="96"/>
+        <Button Command="{Binding Path=DelCmd}" Content="DELETE" HorizontalAlignment="Left" Margin="23,149,0,0" VerticalAlignment="Top" Height="41" Width="96"/>
+    </Grid>
+</Window>

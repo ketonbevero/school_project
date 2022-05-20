@@ -1,0 +1,32 @@
+﻿<Window x:Class="AmmuNation.WPF.UI.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="clr-namespace:AmmuNation.WPF.UI"
+        xmlns:vm="clr-namespace:AmmuNation.WPF.VM"
+        mc:Ignorable="d"
+        Title="EditWeapon" Height="300" Width="307">
+    <Window.Resources>
+        <vm:EditorViewModel x:Key="VM"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource VM}">
+        <Label Content="Name" HorizontalAlignment="Left" Margin="27,19,0,0" VerticalAlignment="Top" Height="24" Width="45"/>
+        <Label Content="Manufacturer" HorizontalAlignment="Left" Margin="27,52,0,0" VerticalAlignment="Top"/>
+        <Label Content="Type" HorizontalAlignment="Left" Margin="27,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="Caliber" HorizontalAlignment="Left" Margin="27,113,0,0" VerticalAlignment="Top"/>
+        <Label Content="Weight" HorizontalAlignment="Left" Margin="27,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Stability" HorizontalAlignment="Left" Margin="27,192,0,0" VerticalAlignment="Top"/>
+        <Label Content="Accuracy" HorizontalAlignment="Left" Margin="27,166,0,0" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding Path=Weapon.Name}" HorizontalAlignment="Left" Margin="128,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <ComboBox ItemsSource="{Binding Path=WeaponManufacturer}" SelectedItem="{Binding Path=Weapon.Manufacturer}" HorizontalAlignment="Left" Margin="128,52,0,0" VerticalAlignment="Top" Width="144"/>
+        <ComboBox ItemsSource="{Binding Path=ModelType}" SelectedItem="{Binding Path=Weapon.Type}" HorizontalAlignment="Left" Margin="128,84,0,0" VerticalAlignment="Top" Width="144"/>
+        <TextBox Text="{Binding Path=Weapon.Caliber}" HorizontalAlignment="Left" Margin="128,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <TextBox Text="{Binding Path=Weapon.Weight}" HorizontalAlignment="Left" Margin="128,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <Slider AutoToolTipPlacement="BottomRight" Minimum="1" Maximum="100" Value="{Binding Path=Weapon.Accuracy}"  HorizontalAlignment="Left" Margin="128,170,0,0" VerticalAlignment="Top" Width="144"/>
+        <Slider AutoToolTipPlacement="BottomRight" Minimum="1" Maximum="100" Value="{Binding Path=Weapon.Stability}" HorizontalAlignment="Left" Margin="128,196,0,0" VerticalAlignment="Top" Width="144"/>
+        <Button Click="OKClick" Content="OK" HorizontalAlignment="Left" Margin="27,226,0,0" VerticalAlignment="Top" Height="33" Width="98"/>
+        <Button Click="CancelClick" Content="CANCEL" HorizontalAlignment="Left" Margin="150,226,0,0" VerticalAlignment="Top" Height="33" Width="98"/>
+
+    </Grid>
+</Window>

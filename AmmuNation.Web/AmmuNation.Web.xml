@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AmmuNation.Web</name>
+    </assembly>
+    <members>
+        <member name="T:AmmuNation.Web.Controllers.HomeController">
+            <summary>
+            Home controller.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{AmmuNation.Web.Controllers.HomeController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Web.Controllers.HomeController"/> class.
+            </summary>
+            <param name="logger">logger.</param>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.HomeController.Index">
+            <summary>
+            Index.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.HomeController.Privacy">
+            <summary>
+            Privacy.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.HomeController.Error">
+            <summary>
+            Error.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="T:AmmuNation.Web.Controllers.RandomController">
+            <summary>
+            Random controller.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.RandomController.#ctor(AmmuNation.Logic.Interfaces.IModelLogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Web.Controllers.RandomController"/> class.
+            </summary>
+            <param name="logic">logic.</param>
+            <param name="mapper">mapper.</param>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.RandomController.Index">
+            <summary>
+            Index method.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.RandomController.GetOne">
+            <summary>
+            Generates a random model entity and inserts it to the db.
+            </summary>
+            <returns>Json.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.RandomController.Select(System.Int32)">
+            <summary>
+            Sets the status of an entity by id.
+            </summary>
+            <param name="id">entity id.</param>
+            <returns>Json.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.RandomController.Unselect(System.Int32)">
+            <summary>
+            Sets the status of an entity by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>Json.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.RandomController.Selections">
+            <summary>
+            Returns the selected and not selected items html.
+            </summary>
+            <returns>HTML.</returns>
+        </member>
+        <member name="T:AmmuNation.Web.Controllers.WeaponsApiController">
+            <summary>
+            Weapons api controller.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsApiController.#ctor(AmmuNation.Logic.Interfaces.IModelLogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Web.Controllers.WeaponsApiController"/> class.
+            </summary>
+            <param name="logic">logic.</param>
+            <param name="mapper">mapper.</param>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsApiController.GetAll">
+            <summary>
+            Gets all model.
+            </summary>
+            <returns>Models.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsApiController.DelOneWeapon(System.Int32)">
+            <summary>
+            Deletes a weapon.
+            </summary>
+            <param name="id">id.</param>
+            <returns>Apiresult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsApiController.AddOneWeapon(AmmuNation.Web.Models.Weapon)">
+            <summary>
+            Adds a weapon.
+            </summary>
+            <param name="weapon">weapon.</param>
+            <returns>Apiresult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsApiController.ModeOneWeapon(AmmuNation.Web.Models.Weapon)">
+            <summary>
+            Modes a weapon.
+            </summary>
+            <param name="weapon">weapon.</param>
+            <returns>Apiresult.</returns>
+        </member>
+        <member name="T:AmmuNation.Web.Controllers.WeaponsController">
+            <summary>
+            Main controller of weapons.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsController.#ctor(AmmuNation.Logic.Interfaces.IModelLogic,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Web.Controllers.WeaponsController"/> class.
+            </summary>
+            <param name="logic">logic.</param>
+            <param name="mapper">mapper.</param>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsController.Index">
+            <summary>
+            Index.
+            </summary>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsController.Details(System.Int32)">
+            <summary>
+            Details of a weapon.
+            </summary>
+            <param name="id">id.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsController.Remove(System.Int32)">
+            <summary>
+            Removes a weapon by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsController.Edit(System.Int32)">
+            <summary>
+            Edits a weapons by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:AmmuNation.Web.Controllers.WeaponsController.Edit(AmmuNation.Web.Models.Weapon,System.String)">
+            <summary>
+            This method creates a weapon instance and inserts to the Debt.
+            </summary>
+            <param name="weapon">a weapon.</param>
+            <param name="editAction">editaction.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="T:AmmuNation.Web.Models.ApiResult">
+            <summary>
+            Result of api.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.ApiResult.OperationResult">
+            <summary>
+            Gets or sets a value indicating whether the result of the operation.
+            </summary>
+        </member>
+        <member name="T:AmmuNation.Web.Models.ErrorViewModel">
+            <summary>
+            Error vm.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.ErrorViewModel.RequestId">
+            <summary>
+            Gets or Sets requestId.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            Gets a value indicating whether requst id.
+            </summary>
+            <return>True/False.</return>
+        </member>
+        <member name="T:AmmuNation.Web.Models.MapperFactory">
+            <summary>
+            Mapper for vm to entity model.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Models.MapperFactory.CreateMapper">
+            <summary>
+            Initialize mapper.
+            </summary>
+            <returns>Mapper.</returns>
+        </member>
+        <member name="T:AmmuNation.Web.Models.Weapon">
+            <summary>
+            Weapon model.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.Id">
+            <summary>
+            Gets or Sets id.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.Name">
+            <summary>
+            Gets or Sets name.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.Manufacturer">
+            <summary>
+            Gets or Sets manufacturer.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.Type">
+            <summary>
+            Gets or Sets type.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.Caliber">
+            <summary>
+            Gets or Sets caliber.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.Weight">
+            <summary>
+            Gets or Sets weight.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.Stability">
+            <summary>
+            Gets or Sets stability.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.Accuracy">
+            <summary>
+            Gets or Sets accuracy.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.Weapon.State">
+            <summary>
+            Gets or sets a value indicating whether gets or Sets state.
+            </summary>
+        </member>
+        <member name="T:AmmuNation.Web.Models.WeaponListViewModel">
+            <summary>
+            List of weapons.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Models.WeaponListViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Web.Models.WeaponListViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.WeaponListViewModel.WeaponList">
+            <summary>
+            Gets or Sets WeaponList.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.Web.Models.WeaponListViewModel.EditedWeapon">
+            <summary>
+            Gets or Sets EditedWeapon.
+            </summary>
+        </member>
+        <member name="T:AmmuNation.Web.Program">
+            <summary>
+            Program class.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Program.Main(System.String[])">
+            <summary>
+            Program starts here.
+            </summary>
+            <param name="args">args.</param>
+        </member>
+        <member name="M:AmmuNation.Web.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Create host builder.
+            </summary>
+            <param name="args">args.</param>
+            <returns>HostBuilder.</returns>
+        </member>
+        <member name="T:AmmuNation.Web.Startup">
+            <summary>
+            Startup class.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Web.Startup"/> class.
+            </summary>
+            <param name="configuration">config.</param>
+        </member>
+        <member name="P:AmmuNation.Web.Startup.Configuration">
+            <summary>
+            Gets Configuration.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Web.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers services to the container here.
+            </summary>
+            <param name="services">services.</param>
+        </member>
+        <member name="M:AmmuNation.Web.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configure.
+            </summary>
+            <param name="app">app.</param>
+            <param name="env">env.</param>
+        </member>
+    </members>
+</doc>

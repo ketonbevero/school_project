@@ -1,0 +1,14 @@
+﻿@model AmmuNation.Web.Models.WeaponListViewModel
+
+@{ 
+    ViewData["Title"] = "WeaponsIndex";
+}
+
+<h2>Weapons Index</h2>
+
+
+<p style="color:red">@TempData["editResult"]</p>
+
+@await Html.PartialAsync("WeaponsEdit", Model.EditedWeapon)
+
+@await Html.PartialAsync("WeaponsList", Model.WeaponList)

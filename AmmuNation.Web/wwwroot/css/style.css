@@ -1,0 +1,15 @@
+﻿table.selected-items {
+    float: left;
+}
+
+table.unselected-items {
+    float: right;
+}
+
+tr {
+    border: 1px solid;
+}
+
+td {
+    border: 1px solid;
+}

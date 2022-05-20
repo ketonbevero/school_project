@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['delete_269',['Delete',['../interface_ammu_nation_1_1_repository_1_1_i_repository.html#ac4126a1b82d5c5f9ddae8265cae3d971',1,'AmmuNation.Repository.IRepository.Delete()'],['../class_ammu_nation_1_1_repository_1_1_b_repository.html#a6ae13366116d3f4ae2ef5c2deb1d92dd',1,'AmmuNation.Repository.BRepository.Delete()']]],
+  ['deletemanufacturer_270',['DeleteManufacturer',['../interface_ammu_nation_1_1_logic_1_1_interfaces_1_1_i_manufacturer_logic.html#a94a040bbfd94dcecb658d961f7bb358a',1,'AmmuNation::Logic::Interfaces::IManufacturerLogic']]],
+  ['deletemodel_271',['DeleteModel',['../interface_ammu_nation_1_1_logic_1_1_interfaces_1_1_i_model_logic.html#a095c3d9f47c0bc253347f3cfc5e0befd',1,'AmmuNation.Logic.Interfaces.IModelLogic.DeleteModel()'],['../class_ammu_nation_1_1_logic_1_1_logic_1_1_model_logic.html#a5ba28f5c2c9d429b551bffba47b83cfb',1,'AmmuNation.Logic.Logic.ModelLogic.DeleteModel()']]],
+  ['deleterandomitems_272',['DeleteRandomItems',['../interface_ammu_nation_1_1_wpf_client_1_1_i_main_logic.html#a9ec14207427c1288a6cdc23bb2b739a5',1,'AmmuNation::WpfClient.IMainLogic.DeleteRandomItems()'],['../class_ammu_nation_1_1_wpf_client_1_1_main_logic.html#acb3e79e8fc2db8af5ec1e33295ef968b',1,'AmmuNation::WpfClient.MainLogic.DeleteRandomItems()']]],
+  ['deleterandoms_273',['DeleteRandoms',['../class_ammu_nation_1_1_w_p_f___h_f4_1_1_main_weapon_v_m.html#a537fe8ed29d86e4cdcca3fd5edc5deb9',1,'AmmuNation::WPF_HF4::MainWeaponVM']]],
+  ['deleteweapon_274',['DeleteWeapon',['../interface_ammu_nation_1_1_w_p_f_1_1_b_l_1_1_i_weapon_logic.html#a7b14f0d5d34ab13aa491bb8bf5eae37d',1,'AmmuNation::WPF.BL.IWeaponLogic.DeleteWeapon()'],['../class_ammu_nation_1_1_w_p_f_1_1_b_l_1_1_weapon_logic.html#a394b40ab11f84b580ebfa012091a506c',1,'AmmuNation::WPF.BL.WeaponLogic.DeleteWeapon()']]],
+  ['deloneweapon_275',['DelOneWeapon',['../class_ammu_nation_1_1_web_1_1_controllers_1_1_weapons_api_controller.html#a7b5a279fee416c24c8e83e882df6b90a',1,'AmmuNation::Web::Controllers::WeaponsApiController']]],
+  ['details_276',['Details',['../class_ammu_nation_1_1_web_1_1_controllers_1_1_weapons_controller.html#a2fef6b5094ea6d1cdabd2e9818c75598',1,'AmmuNation::Web::Controllers::WeaponsController']]]
+];

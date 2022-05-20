@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AmmuNation.WpfClient</name>
+    </assembly>
+    <members>
+        <member name="T:AmmuNation.WpfClient.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.WpfClient.App"/> class.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:AmmuNation.WpfClient.EditorServiceViaWindow">
+            <summary>
+            IEditorService implement.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.EditorServiceViaWindow.EditWeapon(AmmuNation.WpfClient.WeaponVM)">
+            <inheritdoc/>
+        </member>
+        <member name="T:AmmuNation.WpfClient.EditorWindow">
+            <summary>
+            Interaction logic for EditorWindow.xaml.
+            </summary>
+            <summary>
+            EditorWindow
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.WpfClient.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.EditorWindow.#ctor(AmmuNation.WpfClient.WeaponVM)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.WpfClient.EditorWindow"/> class.
+            </summary>
+            <param name="weapon">weapon.</param>
+        </member>
+        <member name="M:AmmuNation.WpfClient.EditorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:AmmuNation.WpfClient.IEditorService">
+            <summary>
+            Service to edit weapon.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IEditorService.EditWeapon(AmmuNation.WpfClient.WeaponVM)">
+            <summary>
+            Declare that the Edit ends with OK or Cancel.
+            </summary>
+            <param name="weapon">weapon.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="T:AmmuNation.WpfClient.IMainLogic">
+            <summary>
+            Main logic interface.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.SendMessage(System.Boolean)">
+            <summary>
+            Message sender method.
+            </summary>
+            <param name="success">success.</param>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.ApiGetWeapons">
+            <summary>
+            Returns all weapons.
+            </summary>
+            <returns>Weapons list.</returns>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.ApiDelWeapon(AmmuNation.WpfClient.WeaponVM)">
+            <summary>
+            Deletes specified weapon.
+            </summary>
+            <param name="weapon">A weapon.</param>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.ApiEditWeapon(AmmuNation.WpfClient.WeaponVM,System.Boolean)">
+            <summary>
+            Edits a weapon.
+            </summary>
+            <param name="weapon">A weapon.</param>
+            <param name="isEditing">Editor mode.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.EditWeapon(AmmuNation.WpfClient.WeaponVM,System.Func{AmmuNation.WpfClient.WeaponVM,System.Boolean})">
+            <summary>
+            Edits a weapon.
+            </summary>
+            <param name="weapon">A weapons.</param>
+            <param name="editorFunc">Function for editing.</param>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.AddWeapon">
+            <summary>
+            Add a new weapon.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.ForGetOne(System.Int32)">
+            <summary>
+            Generates a new random entity.
+            </summary>
+            <param name="quantity">quantity.</param>
+            <returns>WeaponVMs.</returns>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.RandomSelection(AmmuNation.WpfClient.WeaponVM)">
+            <summary>
+            Selects a weapon and sets its status.
+            </summary>
+            <param name="weapon">weapon.</param>
+            <returns>Output.</returns>
+        </member>
+        <member name="M:AmmuNation.WpfClient.IMainLogic.DeleteRandomItems(System.Collections.Generic.IList{AmmuNation.WpfClient.WeaponVM})">
+            <summary>
+            Deletes all randomly generated weapon.
+            </summary>
+            <param name="weapons">weapons.</param>
+        </member>
+        <member name="T:AmmuNation.WpfClient.MainLogic">
+            <summary>
+            Main logic.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.#ctor(AmmuNation.WpfClient.IEditorService)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.WpfClient.MainLogic"/> class.
+            </summary>
+            <param name="editor">editorservice.</param>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.ApiGetWeapons">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.ForGetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.ApiDelWeapon(AmmuNation.WpfClient.WeaponVM)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.ApiEditWeapon(AmmuNation.WpfClient.WeaponVM,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.EditWeapon(AmmuNation.WpfClient.WeaponVM,System.Func{AmmuNation.WpfClient.WeaponVM,System.Boolean})">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.AddWeapon">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.SendMessage(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.RandomSelection(AmmuNation.WpfClient.WeaponVM)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainLogic.DeleteRandomItems(System.Collections.Generic.IList{AmmuNation.WpfClient.WeaponVM})">
+            <inheritdoc/>
+        </member>
+        <member name="T:AmmuNation.WpfClient.MainVM">
+            <summary>
+            Main view model.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainVM.#ctor(AmmuNation.WpfClient.IMainLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.WpfClient.MainVM"/> class.
+            </summary>
+            <param name="logic">logic.</param>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainVM.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.WpfClient.MainVM"/> class.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.MainVM.AllWeapons">
+            <summary>
+            Gets or sets all weapons.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.MainVM.SelectedWeapon">
+            <summary>
+            Gets or sets selected weapon.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.MainVM.EditorFunc">
+            <summary>
+            Gets or sets editor function.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.MainVM.AddCmd">
+            <summary>
+            Gets addcmd.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.MainVM.DelCmd">
+            <summary>
+            Gets delcmd.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.MainVM.ModCmd">
+            <summary>
+            Gets modcmd.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.MainVM.LoadCmd">
+            <summary>
+            Gets loadcmd.
+            </summary>
+        </member>
+        <member name="T:AmmuNation.WpfClient.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.WpfClient.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:AmmuNation.WpfClient.MyIoc">
+            <summary>
+            Ioc instance for container.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.MyIoc.Instance">
+            <summary>
+            Gets instance.
+            </summary>
+        </member>
+        <member name="T:AmmuNation.WpfClient.WeaponVM">
+            <summary>
+            Weapon class for ui.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.ModelType">
+            <summary>
+            Gets modelType.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.WeaponManufacturer">
+            <summary>
+            Gets weaponmanufacturer.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.Id">
+            <summary>
+            Gets or Sets name.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.Name">
+            <summary>
+            Gets or Sets name.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.Manufacturer">
+            <summary>
+            Gets or sets manufacturer.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.Type">
+            <summary>
+            Gets or sets type.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.Caliber">
+            <summary>
+            Gets or sets caliber.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.Weight">
+            <summary>
+            Gets or sets weight.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.Stability">
+            <summary>
+            Gets or sets stability.
+            </summary>
+        </member>
+        <member name="P:AmmuNation.WpfClient.WeaponVM.Accuracy">
+            <summary>
+            Gets or sets accuracy.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.WpfClient.WeaponVM.CopyFrom(AmmuNation.WpfClient.WeaponVM)">
+            <summary>
+            Shallow copy for editing.
+            </summary>
+            <param name="other">weapon.</param>
+        </member>
+        <member name="T:AmmuNation.WPF.Data.Enums.ModelType">
+            <summary>
+            Enum for possible model types.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.ModelType.SniperRifle">
+            <summary>
+            Model type.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.ModelType.HandGun">
+            <summary>
+            Model type.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.ModelType.SubmachineGun">
+            <summary>
+            Model type.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.ModelType.Rifle">
+            <summary>
+            Model type.
+            </summary>
+        </member>
+        <member name="T:AmmuNation.WPF.Data.Enums.WeaponManufacturer">
+            <summary>
+            Possible weapon manufacturers.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.WeaponManufacturer.HecklerandKoch">
+            <summary>
+            Manufacturer.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.WeaponManufacturer.SIGSauer">
+            <summary>
+            Manufacturer.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.WeaponManufacturer.ColtDefense">
+            <summary>
+            Manufacturer.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.WeaponManufacturer.SpringfieldArmory">
+            <summary>
+            Manufacturer.
+            </summary>
+        </member>
+        <member name="F:AmmuNation.WPF.Data.Enums.WeaponManufacturer.FNHerstal">
+            <summary>
+            Manufacturer.
+            </summary>
+        </member>
+    </members>
+</doc>

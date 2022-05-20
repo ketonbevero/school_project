@@ -1,0 +1,20 @@
+﻿<Window x:Class="AmmuNation.WpfClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AmmuNation.WpfClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.DataContext>
+        <local:MainVM/>
+    </Window.DataContext>
+    <Grid>
+        <Button Command="{Binding Path=AddCmd}" Content="ADD" HorizontalAlignment="Left" Margin="23,21,0,0" VerticalAlignment="Top" Height="41" Width="96"/>
+        <Button Command="{Binding Path=ModCmd}" Content="MODIFY" HorizontalAlignment="Left" Margin="23,84,0,0" VerticalAlignment="Top" Height="41" Width="96"/>
+        <Button Command="{Binding Path=DelCmd}" Content="DELETE" HorizontalAlignment="Left" Margin="23,149,0,0" VerticalAlignment="Top" Height="41" Width="96"/>
+        <Button Command="{Binding Path=LoadCmd}" Content="LOAD" HorizontalAlignment="Left" Margin="23,217,0,0" VerticalAlignment="Top" Height="41" Width="96"/>
+        <DataGrid IsReadOnly="True" SelectedItem="{Binding Path=SelectedWeapon}" ItemsSource="{Binding Path=AllWeapons}"  Margin="161,21,106,85"/>
+    </Grid>
+</Window>

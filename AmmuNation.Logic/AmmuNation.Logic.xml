@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AmmuNation.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:AmmuNation.Logic.Interfaces.IManufacturerLogic">
+            <summary>
+            The IManufacturerLogic interface presents the main functions of the manufacturer business logic.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IManufacturerLogic.CreateManufacturer(AmmuNation.Data.Models.Manufacturer)">
+            <summary>
+            Inserts a new manufacturer to the db.
+            </summary>
+            <param name="manufacturer">manufacturer.</param>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IManufacturerLogic.GetAllManufacturer">
+            <summary>
+            Returns every entities of the given type from the database.
+            </summary>
+            <returns>IQueryable.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IManufacturerLogic.GetOneManufacturer(System.Int32)">
+            <summary>
+            Returns the chosen entity by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>Manufacturer entity.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IManufacturerLogic.UpdateManufacturer(System.Int32,System.String,System.String)">
+            <summary>
+            Updates manufacturer data to the specified parameters.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="name">name.</param>
+            <param name="origin">origin.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IManufacturerLogic.DeleteManufacturer(System.Int32)">
+            <summary>
+            This method removes the chosen entity by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="T:AmmuNation.Logic.Interfaces.IModelLogic">
+            <summary>
+            The IModelLogic interface presents the main functions of the model logic.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.CreateModel(AmmuNation.Data.Models.Model)">
+            <summary>
+            Inserts a new model to the db.
+            </summary>
+            <param name="model">model.</param>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.GetAllModel">
+            <summary>
+            Returns every entities of the given type from the database.
+            </summary>
+            <returns>IList.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.GetOneModel(System.Int32)">
+            <summary>
+            Returns the chosen entity by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>Model entity.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.UpdateModel(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Updates model data to the specified parameters.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="accuracy">accuracy.</param>
+            <param name="stability">stability.</param>s
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.DeleteModel(System.Int32)">
+            <summary>
+            This method removes the chosen entity by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.LastID">
+            <summary>
+            Returns the lasd ID of debt.
+            </summary>
+            <returns>ID.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.GetManufacturerID(System.String)">
+            <summary>
+            Gets the id of the right manufacturer by it's name.
+            </summary>
+            <param name="manufacturername">manufacturer name.</param>
+            <returns>ID.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.SetModelStatus(System.Int32,System.Boolean)">
+            <summary>
+            Updates model status whether it's selected or not.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="status">status.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Interfaces.IModelLogic.StatusNumber(System.Boolean)">
+            <summary>
+            Returns the count of models with specified status.
+            </summary>
+            <param name="status">status.</param>
+            <returns>models count.</returns>
+        </member>
+        <member name="T:AmmuNation.Logic.Logic.ModelLogic">
+            <summary>
+            The ModelLogic.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.#ctor(AmmuNation.Repository.IModelRepository,AmmuNation.Repository.IManufacturerRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Logic.Logic.ModelLogic"/> class.
+            </summary>
+            <param name="modelRepository">modelrepository.</param>
+            <param name="manuRepository">manurepository.</param>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.CreateModel(AmmuNation.Data.Models.Model)">
+            <summary>
+            Creates a new model and inserts it to the db.
+            </summary>
+            <param name="model">model.</param>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.DeleteModel(System.Int32)">
+            <summary>
+            Deletes an entity from the db.
+            </summary>
+            <param name="id">id.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.GetAllModel">
+            <summary>
+            Gets all model from the db.
+            </summary>
+            <returns>IList.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.GetOneModel(System.Int32)">
+            <summary>
+            Gets an entity chosen by id from the db.
+            </summary>
+            <param name="id">id.</param>
+            <returns>Model entity.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.UpdateModel(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Updates a model chosen by id.
+            </summary>
+            <param name="id">id.</param>
+            <param name="accuracy">accuracy.</param>
+            <param name="stability">stability.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.SetModelStatus(System.Int32,System.Boolean)">
+            <summary>
+            Updates model status whether it's selected or not.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="status">status.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.StatusNumber(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.LastID">
+            <summary>
+            Returns the last used id of the debt.
+            </summary>
+            <returns>ID.</returns>
+        </member>
+        <member name="M:AmmuNation.Logic.Logic.ModelLogic.GetManufacturerID(System.String)">
+            <summary>
+            Gets the id of the right manufacturer by it's name.
+            </summary>
+            <param name="manufacturername">manufacturer name.</param>
+            <returns>ID.</returns>
+        </member>
+    </members>
+</doc>

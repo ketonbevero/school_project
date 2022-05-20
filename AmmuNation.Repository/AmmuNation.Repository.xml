@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AmmuNation.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:AmmuNation.Repository.IRepository`1">
+            <summary>
+            Collective interface of the repo classes.
+            </summary>
+            <typeparam name="T">Generic parameter.</typeparam>
+        </member>
+        <member name="M:AmmuNation.Repository.IRepository`1.GetOne(System.Int32)">
+            <summary>
+            Returns an element of the repository.
+            </summary>
+            <returns>T type query.</returns>
+            <param name="id" >id.</param>
+        </member>
+        <member name="M:AmmuNation.Repository.IRepository`1.GetAll">
+            <summary>
+            Returns all the elements of the repository.
+            </summary>
+            <returns>T type query.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.IRepository`1.Delete(System.Int32)">
+            <summary>
+            Deletes the specific element.
+            </summary>
+            <param name="id">id.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.IRepository`1.Insert(`0)">
+            <summary>
+            Inserts a new entity.
+            </summary>
+            <param name="entity">new entity.</param>
+        </member>
+        <member name="M:AmmuNation.Repository.IRepository`1.CheckIfIdExists(System.Int32)">
+            <summary>
+            Checks if the given id is exists in the database.
+            </summary>
+            <param name="id">id of the entity.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="T:AmmuNation.Repository.IManufacturerRepository">
+            <summary>
+            Initialization interface for the ManufacturerRepository.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Repository.IManufacturerRepository.Update(System.Int32,System.String,System.String)">
+            <summary>
+            Update's mmanufacturer data to the specified parameters.
+            </summary>
+            <param name="id">id.</param>
+            <param name="name">name.</param>
+            <param name="origin">origin.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="T:AmmuNation.Repository.IModelRepository">
+            <summary>
+            Initialization interface for the ModelRepository.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Repository.IModelRepository.Update(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Update's model data to the specified parameters.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="accuracy">accuracy.</param>
+            <param name="stability">stability.</param>s
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.IModelRepository.UpdateStatus(System.Int32,System.Boolean)">
+            <summary>
+            Updates model status whether it's selected or not.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="status">status.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.IModelRepository.GetSelectedOrUnsceledtedItemsCount(System.Boolean)">
+            <summary>
+            Returns the count of the models with specified status.
+            </summary>
+            <param name="status">status.</param>
+            <returns>model number.</returns>
+        </member>
+        <member name="T:AmmuNation.Repository.BRepository`1">
+            <summary>
+            Generic implementation of Repository.
+            </summary>
+            <typeparam name="T">Generic parameter.</typeparam>
+        </member>
+        <member name="F:AmmuNation.Repository.BRepository`1.ctx">
+            <summary>
+            The database context copy.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Repository.BRepository`1.#ctor(AmmuNation.Data.Models.AmmuNationDebtContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Repository.BRepository`1"/> class.
+            </summary>
+            <param name="ctx">database context.</param>
+        </member>
+        <member name="M:AmmuNation.Repository.BRepository`1.CheckIfIdExists(System.Int32)">
+            <summary>
+            This method checks the entity (given by id) exists in the database.
+            </summary>
+            <param name="id">id.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.BRepository`1.Delete(System.Int32)">
+            <summary>
+            This method removes the chosen entity by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.BRepository`1.GetAll">
+            <summary>
+            Returns every entities of the given type from the database.
+            </summary>
+            <returns>List of chosen entities.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.BRepository`1.GetOne(System.Int32)">
+            <summary>
+            Returns the chosen entity by id.
+            </summary>
+            <param name="id">id.</param>
+            <returns>Selected entity.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.BRepository`1.Insert(`0)">
+            <summary>
+            Inserts a new entity.
+            </summary>
+            <param name="entity">new entity.</param>
+        </member>
+        <member name="T:AmmuNation.Repository.ManufacturerRepository">
+            <summary>
+            Manufacturer repository.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Repository.ManufacturerRepository.#ctor(AmmuNation.Data.Models.AmmuNationDebtContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Repository.ManufacturerRepository"/> class.
+            </summary>
+            <param name="ctx">Database context.</param>
+        </member>
+        <member name="M:AmmuNation.Repository.ManufacturerRepository.GetOne(System.Int32)">
+            <summary>
+            Returns an element of the repository.
+            </summary>
+            <param name="id">id.</param>
+            <returns>The chosen Manufacturer entity.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.ManufacturerRepository.Update(System.Int32,System.String,System.String)">
+            <summary>
+            Updates manufacturer data to the specified parameters.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="name">name.</param>
+            <param name="origin">origin.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="T:AmmuNation.Repository.ModelRepository">
+            <summary>
+            Model repository.
+            </summary>
+        </member>
+        <member name="M:AmmuNation.Repository.ModelRepository.#ctor(AmmuNation.Data.Models.AmmuNationDebtContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AmmuNation.Repository.ModelRepository"/> class.
+            </summary>
+            <param name="ctx">Database context.</param>
+        </member>
+        <member name="M:AmmuNation.Repository.ModelRepository.GetOne(System.Int32)">
+            <summary>
+            Returns an element of the repository.
+            </summary>
+            <param name="id">id.</param>
+            <returns>The chosen Model entity.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.ModelRepository.Update(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Updates model data to the specified parameters.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="accuracy">accuracy.</param>
+            <param name="stability">stability.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.ModelRepository.UpdateStatus(System.Int32,System.Boolean)">
+            <summary>
+            Updates model status whether it's selected or not.
+            </summary>
+            <param name="id">modelid.</param>
+            <param name="status">status.</param>
+            <returns>True/False.</returns>
+        </member>
+        <member name="M:AmmuNation.Repository.ModelRepository.GetSelectedOrUnsceledtedItemsCount(System.Boolean)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>
